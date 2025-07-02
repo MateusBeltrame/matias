@@ -1,0 +1,11 @@
+services:
+  app:
+    build: .
+    container_name: api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Monta o diretório atual no contêiner para refletir as alterações de código (hot-reload).
+      - .:/app
+
+
